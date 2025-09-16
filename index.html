@@ -65,7 +65,35 @@
             opacity: 1;
             transform: translateY(0);
         }
+
+        /* Beautiful thin scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: rgba(249, 246, 242, 0.3);
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(45deg, #D4AF37, #B8860B);
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(45deg, #B8860B, #DAA520);
+            transform: scale(1.1);
+        }
+
+        /* For Firefox */
+        html {
+            scrollbar-width: thin;
+            scrollbar-color: #D4AF37 rgba(249, 246, 242, 0.3);
+        }
     </style>
+    <link rel="icon" type="image/png" href="https://png.klev.club/uploads/posts/2024-04/png-klev-club-97ri-p-ikonka-kniga-png-31.png">
 </head>
 <body>
 
