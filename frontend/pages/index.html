@@ -1,0 +1,1617 @@
+<!DOCTYPE html>
+<html lang="kk" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Міржақып Дулатұлы: "Оян, Қазақ!"</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #F9F6F2;
+            color: #3D352A;
+        }
+        h1, h2, h3 {
+            font-family: 'Merriweather', serif;
+        }
+        .hero-bg {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80') no-repeat center center;
+            background-size: cover;
+            background-attachment: fixed;
+            position: relative;
+        }
+        
+        .hero-bg::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at center, transparent 0%, rgba(0,0,0,0.3) 100%);
+            pointer-events: none;
+        }
+        
+        @keyframes float-1 {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            33% { transform: translateY(-30px) rotate(120deg); }
+            66% { transform: translateY(-20px) rotate(240deg); }
+        }
+        
+        @keyframes float-2 {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-40px) rotate(180deg); }
+        }
+        
+        @keyframes float-3 {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            25% { transform: translateY(-25px) rotate(90deg); }
+            75% { transform: translateY(-35px) rotate(270deg); }
+        }
+        
+        .animate-float-1 { animation: float-1 8s ease-in-out infinite; }
+        .animate-float-2 { animation: float-2 6s ease-in-out infinite; }
+        .animate-float-3 { animation: float-3 10s ease-in-out infinite; }
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+
+    <header class="bg-white/90 backdrop-blur-sm fixed top-0 left-0 right-0 z-50 shadow-md">
+        <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="text-xl font-bold font-serif text-[#A99B85]">М. Дулатұлы</div>
+                <div class="hidden md:flex space-x-6 text-sm font-medium">
+                    <a href="#context" class="hover:text-[#A99B85] transition-colors">Дәуір үні</a>
+                    <a href="#bio" class="hover:text-[#A99B85] transition-colors">Тұлғасы</a>
+                    <a href="#book" class="hover:text-[#A99B85] transition-colors">Кітап</a>
+                    <a href="#legacy" class="hover:text-[#A99B85] transition-colors">Мұра</a>
+                    <a href="#sources" class="hover:text-[#A99B85] transition-colors">Дереккөздер</a>
+                </div>
+                <div class="text-sm text-gray-600 italic">
+                    орындаған: Мақажан М.
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- I. Басты экран -->
+        <section id="hero" class="h-screen w-full flex items-center justify-center hero-bg text-white text-center relative overflow-hidden">
+            <!-- Animated Particles -->
+            <div class="absolute inset-0 pointer-events-none">
+                <div class="absolute top-20 left-20 w-2 h-2 bg-white/30 rounded-full animate-float-1"></div>
+                <div class="absolute top-32 right-32 w-1 h-1 bg-white/20 rounded-full animate-float-2"></div>
+                <div class="absolute top-64 left-16 w-3 h-3 bg-white/10 rounded-full animate-float-3"></div>
+                <div class="absolute bottom-32 right-20 w-1 h-1 bg-white/25 rounded-full animate-float-1"></div>
+                <div class="absolute bottom-48 left-32 w-2 h-2 bg-white/15 rounded-full animate-float-2"></div>
+                <div class="absolute top-48 right-48 w-1 h-1 bg-white/20 rounded-full animate-float-3"></div>
+                <div class="absolute bottom-64 right-64 w-2 h-2 bg-white/10 rounded-full animate-float-1"></div>
+            </div>
+            
+            <!-- Main Content -->
+            <div class="max-w-4xl mx-auto px-4 relative z-10">
+                <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-4 drop-shadow-lg">
+                    Міржақып Дулатұлы
+                    <span class="block text-2xl md:text-4xl text-[#D4C5B0] mt-2">"Оян, Қазақ!"</span>
+                </h1>
+                <p class="text-lg md:text-xl max-w-2xl mx-auto mb-8 drop-shadow-md">ХХ ғасыр басындағы қазақ даласын дүр сілкіндірген Міржақып Дулатұлының азаттық үнімен және оның мәңгілік мұрасымен танысыңыз.</p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#context" class="bg-[#A99B85] text-white font-bold py-3 px-8 rounded-full text-lg hover:bg-[#8e7f69] transition-all transform hover:scale-105 shadow-lg">
+                        ТАРИХҚА ҮҢІЛУ
+                    </a>
+                    <a href="#bio" class="border-2 border-white text-white hover:bg-white hover:text-[#3D352A] py-3 px-8 rounded-full text-lg font-bold transition-all transform hover:scale-105 backdrop-blur-sm">
+                        ТҰЛҒА ТУРАЛЫ
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- II. Дәуір үні -->
+        <section id="context" class="py-20 md:py-28">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12 fade-in">
+                    <h2 class="text-3xl md:text-4xl font-bold text-[#A99B85]">Дәуір үні: Неліктен «Оян, Қазақ!» қажет болды?</h2>
+                    <p class="mt-4 text-lg text-gray-700">Бұл кітап – тарихи қажеттіліктен туған, дәуірдің өзі талап еткен үн. Оны түсіну үшін ХХ ғасыр басындағы қазақ халқының басындағы ауыр хал-ахуалды ұғыну қажет.</p>
+                </div>
+                <div class="space-y-6 text-gray-800 leading-relaxed fade-in">
+                    <p>Сол дәуірдегі ең өзекті мәселе – жер мәселесі болды. Патша үкіметінің қоныс аудару саясаты қазақтың шұрайлы жерлерін жаппай тартып алып, халықты шөлейтті аймақтарға ығыстырды. Бұл тек экономикалық дағдарыс қана емес, ұлттың рухани негіздерін шайқалтқан қатер еді.</p>
+                    <p>Отаршылдық саясат орыстандырумен жалғасты: білім беруде қазақ тілі шеттетіліп, мәдениеті ескіліктің қалдығы ретінде көрсетілді. Халық арасында сауатсыздық пен кедейшілік жайылып, қоғамдық санада тоқырау орнады. Міржақып сипаттағандай, ұлт «терең ұйқыда» жатқан еді.</p>
+                    <p>Дәл осындай тарихи тығырықта «Алаш» қайраткерлері сахнаға шықты. Олардың жаршысы болған Міржақып Дулатұлының «Оян, Қазақ!» кітабы – жай туынды емес, отаршылдыққа қарсы бағытталған ұлттық стратегия, шұғыл дабыл болды.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- III. Дала шамшырағы -->
+        <section id="bio" class="py-20 md:py-28 bg-gradient-to-br from-stone-50 to-amber-50">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16" data-aos="fade-up">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gradient">Дала шамшырағы: Міржақып Дулатұлының тұлғасы</h2>
+                    <p class="mt-4 text-lg opacity-80 max-w-3xl mx-auto">Міржақып Дулатұлы – тек ақын ғана емес, ол – өз заманының ұстазы, публицисі, саяси қайраткері және ұлт-азаттық қозғалысының идеологы.</p>
+                </div>
+
+                <div class="grid lg:grid-cols-2 gap-12 items-start">
+                    <!-- Левая колонка: Фото и биография -->
+                    <div data-aos="fade-right">
+                        <div class="bg-white rounded-2xl p-8 shadow-lg">
+                            <!-- Фотография -->
+                            <div class="text-center mb-8">
+                                <div class="relative inline-block">
+                                    <img src="https://kazgazeta.kz/wp-content/uploads/2015/03/%D0%9C%D0%B8%D1%80%D0%B6%D0%B0%D0%BA%D1%8B%D0%BF.jpg" 
+                                         alt="Міржақып Дулатұлы" 
+                                         class="w-56 h-72 object-cover rounded-xl shadow-lg border-4 border-stone-200"
+                                         loading="lazy">
+                                    <div class="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent rounded-xl"></div>
+                                </div>
+                                <h3 class="mt-6 text-2xl font-bold" style="color: var(--primary-color);">Міржақып Дулатұлы</h3>
+                                <p class="text-lg text-stone-600 font-medium">(1885-1935)</p>
+                                <p class="text-sm text-stone-500 mt-2">Қазақ ақыны, жазушысы, драматургы, қоғам қайраткері</p>
+                            </div>
+                            
+                            <!-- Биографическая информация -->
+                            <div class="space-y-6">
+                                <div>
+                                    <h4 class="text-lg font-bold mb-3" style="color: var(--primary-color);">Өмір жолы</h4>
+                                    <p class="text-stone-700 leading-relaxed">1885 жылы Торғай облысында дүниеге келген Міржақып дәстүрлі мұсылманша және орысша білім алды. Бұл оның дәстүр мен жаңашылдықты ұштастыра білген ерекше көзқарасын қалыптастырды.</p>
+                                </div>
+                                
+                                <div>
+                                    <h4 class="text-lg font-bold mb-3" style="color: var(--primary-color);">Қоғамдық қызметі</h4>
+                                    <p class="text-stone-700 leading-relaxed">Ол Әлихан Бөкейханов және Ахмет Байтұрсынұлымен бірге Алаш қозғалысының «үш алыбының» бірі болды. «Қазақ» газеті арқылы халық арасында жаңа идеяларды таратып, ұлттық қоғамдық пікірдің қалыптасуына зор үлес қосты.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Правая колонка: Временная шкала -->
+                    <div data-aos="fade-left">
+                        <div class="bg-white rounded-2xl p-8 shadow-lg">
+                            <h3 class="text-2xl font-bold mb-8 text-center" style="color: var(--primary-color);">Маңызды белестер</h3>
+                            <div class="relative">
+                                <!-- Вертикальная линия -->
+                                <div class="absolute left-6 top-0 bottom-0 w-0.5 bg-stone-300"></div>
+                                
+                                <div class="space-y-8">
+                                    <div class="timeline-item relative pl-16">
+                                        <div class="absolute left-4 w-4 h-4 bg-stone-400 rounded-full border-4 border-white shadow-md" style="top: 0.25rem;"></div>
+                                        <div class="bg-stone-50 p-4 rounded-lg">
+                                            <h4 class="font-bold text-lg mb-2" style="color: var(--primary-color);">1885 — Дүниеге келуі</h4>
+                                            <p class="text-stone-600 text-sm">Ұлт көсемінің өмір жолының басталуы.</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="timeline-item relative pl-16">
+                                        <div class="absolute left-4 w-4 h-4 bg-stone-400 rounded-full border-4 border-white shadow-md" style="top: 0.25rem;"></div>
+                                        <div class="bg-stone-50 p-4 rounded-lg">
+                                            <h4 class="font-bold text-lg mb-2" style="color: var(--primary-color);">1909 — «Оян, Қазақ!» жарық көрді</h4>
+                                            <p class="text-stone-600 text-sm">Қазақ ұлттық санасының оянуына түрткі болған басты еңбек.</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="timeline-item relative pl-16">
+                                        <div class="absolute left-4 w-4 h-4 bg-stone-400 rounded-full border-4 border-white shadow-md" style="top: 0.25rem;"></div>
+                                        <div class="bg-stone-50 p-4 rounded-lg">
+                                            <h4 class="font-bold text-lg mb-2" style="color: var(--primary-color);">1910 — Тұтқындалуы</h4>
+                                            <p class="text-stone-600 text-sm">Патша үкіметінің ұлт-азаттық идеяларға қарсылығын көрсетті.</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="timeline-item relative pl-16">
+                                        <div class="absolute left-4 w-4 h-4 bg-stone-400 rounded-full border-4 border-white shadow-md" style="top: 0.25rem;"></div>
+                                        <div class="bg-stone-50 p-4 rounded-lg">
+                                            <h4 class="font-bold text-lg mb-2" style="color: var(--primary-color);">1928 — Кеңес үкіметінің тұтқындауы</h4>
+                                            <p class="text-stone-600 text-sm">Алаш зиялыларын жаппай қуғын-сүргінге ұшыратудың бастамасы.</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="timeline-item relative pl-16">
+                                        <div class="absolute left-4 w-4 h-4 bg-stone-400 rounded-full border-4 border-white shadow-md" style="top: 0.25rem;"></div>
+                                        <div class="bg-stone-50 p-4 rounded-lg">
+                                            <h4 class="font-bold text-lg mb-2" style="color: var(--primary-color);">1935 — Қайтыс болуы</h4>
+                                            <p class="text-stone-600 text-sm">Соловки лагеріндегі өлімі Алаш қозғалысының қайғылы тағдырының символы болды.</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="timeline-item relative pl-16">
+                                        <div class="absolute left-4 w-4 h-4 bg-stone-400 rounded-full border-4 border-white shadow-md" style="top: 0.25rem;"></div>
+                                        <div class="bg-stone-50 p-4 rounded-lg">
+                                            <h4 class="font-bold text-lg mb-2" style="color: var(--primary-color);">1988 — Ақталуы</h4>
+                                            <p class="text-stone-600 text-sm">Тарихи әділдіктің қалпына келтірілуі және мұрасының жаңғыруы.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- IV. Империяны дүр сілкіндірген кітап -->
+        <section id="book" class="py-20 md:py-28">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16 fade-in">
+                    <h2 class="text-3xl md:text-4xl font-bold text-[#A99B85]">Империяны дүр сілкіндірген кітап</h2>
+                    <p class="mt-4 text-lg text-gray-700 max-w-3xl mx-auto">1909 жылы жарық көрген «Оян, Қазақ!» – жай өлеңдер жинағы емес, ол – біртұтас ұлттық манифест. Билік оны әдебиет ретінде емес, саяси қару ретінде қабылдады.</p>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                    <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl hover:-translate-y-2 transition-all fade-in">
+                        <h3 class="font-bold text-lg mb-2 font-serif text-[#A99B85]">Оқу мен білім</h3>
+                        <p class="text-sm text-gray-600">Надандықты барлық бәленің бастауы санап, заманауи білімді ұлтты сақтаудың жалғыз құралы деп білді.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl hover:-translate-y-2 transition-all fade-in" style="transition-delay: 100ms;">
+                        <h3 class="font-bold text-lg mb-2 font-serif text-[#A99B85]">Ұлттық бірлік</h3>
+                        <p class="text-sm text-gray-600">Рулық бөлінушілікті сынап, бүкіл қазақты бір тудың астына бірігуге, ішкі алауыздықты тоқтатуға шақырды.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl hover:-translate-y-2 transition-all fade-in" style="transition-delay: 200ms;">
+                        <h3 class="font-bold text-lg mb-2 font-serif text-[#A99B85]">Отаршылдыққа қарсылық</h3>
+                        <p class="text-sm text-gray-600">Патша үкіметінің саясатын ашық сынап, халықтың бойында саяси сананы оятуды көздеді.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl hover:-translate-y-2 transition-all fade-in" style="transition-delay: 300ms;">
+                        <h3 class="font-bold text-lg mb-2 font-serif text-[#A99B85]">Жер тағдыры</h3>
+                        <p class="text-sm text-gray-600">Ата-қоныстан айырылуды ұлттың жаны мен болашағынан айырылумен теңеді.</p>
+                    </div>
+                </div>
+                <div class="text-center mt-12 bg-amber-50 border-l-4 border-amber-400 p-6 rounded-r-lg fade-in">
+                    <h3 class="font-bold text-lg text-amber-800 mb-2">Патша үкіметінің реакциясы</h3>
+                    <p class="text-amber-700">Кітап мемлекетке қауіпті деп танылып, бүкіл таралымы тәркіленді, ал авторы 1910 жылы тұтқындалды. Алайда, бұл әрекет кітаптың ықпалын бұрынғыдан да арттыра түсті.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- VI. Үзінділер -->
+        <section id="quotes" class="py-20 md:py-28 bg-white">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+                 <div class="text-center mb-16 fade-in">
+                    <h2 class="text-3xl md:text-4xl font-bold text-[#A99B85]">Ғасырларға жалғасқан ойлар</h2>
+                </div>
+                <blockquote class="text-center text-xl md:text-2xl text-gray-800 leading-relaxed fade-in">
+                    <p>«Көзіңді ашып, оян, қазақ, көтер басты,
+                    <br>Өткізбей қараңғыда бекер жасты.»</p>
+                </blockquote>
+                 <blockquote class="text-center text-xl md:text-2xl text-gray-800 leading-relaxed fade-in">
+                    <p>«Жер кетсе, халықтың кететіні хақ,
+                    <br>Тұра алмас түбінде сыбағасы жоқ.»</p>
+                </blockquote>
+                 <blockquote class="text-center text-xl md:text-2xl text-gray-800 leading-relaxed fade-in">
+                    <p>«Надандық – біздің қазіргі ауруымыз,
+                    <br>Оқу, білім – оның дәрісі.»</p>
+                </blockquote>
+            </div>
+        </section>
+
+        <!-- V. Әдеби талдау -->
+        <section id="analysis" class="py-20 md:py-28 bg-white">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16" data-aos="fade-up">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gradient">Әдеби талдау: «Оян, Қазақ!» шығармасының ерекшеліктері</h2>
+                    <p class="mt-4 text-lg opacity-80">Міржақып Дулатұлының шығармашылық әдісі мен поэтикалық тәсілдерінің талдауы</p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-12 mb-16">
+                    <div data-aos="slide-right">
+                        <h3 class="text-2xl font-bold mb-6" style="color: var(--primary-color);">Жанрлық ерекшеліктер</h3>
+                        <div class="space-y-4">
+                            <div class="p-4 rounded-lg" style="background-color: var(--bg-color); border-left: 4px solid var(--primary-color);">
+                                <h4 class="font-semibold mb-2">Дидактикалық поэзия</h4>
+                                <p class="text-sm opacity-80">Шығарма тәрбиелік мақсатта жазылған, халықты ағартуға бағытталған дидактикалық поэзия үлгісі.</p>
+                            </div>
+                            <div class="p-4 rounded-lg" style="background-color: var(--bg-color); border-left: 4px solid var(--primary-color);">
+                                <h4 class="font-semibold mb-2">Публицистикалық стиль</h4>
+                                <p class="text-sm opacity-80">Ақынның ойы нақты, айқын жеткізілген, публицистикалық стильдің элементтері басым.</p>
+                            </div>
+                            <div class="p-4 rounded-lg" style="background-color: var(--bg-color); border-left: 4px solid var(--primary-color);">
+                                <h4 class="font-semibold mb-2">Ауызша дәстүр</h4>
+                                <p class="text-sm opacity-80">Қазақтың ауызша әдебиетінің дәстүрлері мен жаңа заман талаптарының үйлесімі.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div data-aos="slide-left">
+                        <h3 class="text-2xl font-bold mb-6" style="color: var(--primary-color);">Поэтикалық тәсілдер</h3>
+                        <div class="space-y-4">
+                            <div class="p-4 rounded-lg" style="background-color: var(--bg-color); border-left: 4px solid var(--accent-color);">
+                                <h4 class="font-semibold mb-2">Қайталау (анафора)</h4>
+                                <p class="text-sm opacity-80">«Оян, қазақ!» деген үндеу қайталанып, эмоционалдық әсерді күшейтеді.</p>
+                            </div>
+                            <div class="p-4 rounded-lg" style="background-color: var(--bg-color); border-left: 4px solid var(--accent-color);">
+                                <h4 class="font-semibold mb-2">Метафора және теңеу</h4>
+                                <p class="text-sm opacity-80">«Терең ұйқы», «көзі жоқ адам» сияқты метафоралар арқылы халықтың жағдайын бейнелейді.</p>
+                            </div>
+                            <div class="p-4 rounded-lg" style="background-color: var(--bg-color); border-left: 4px solid var(--accent-color);">
+                                <h4 class="font-semibold mb-2">Риторикалық сұрақтар</h4>
+                                <p class="text-sm opacity-80">Оқырманды ойландыруға, өз-өзіне сын көзбен қарауға итермелейтін сұрақтар.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Тематикалық талдау -->
+                <div class="bg-gradient-to-r from-[var(--secondary-color)] to-[var(--primary-color)] rounded-2xl p-8 text-white" data-aos="zoom-in">
+                    <h3 class="text-2xl font-bold mb-6 text-center">Негізгі тақырыптар мен идеялар</h3>
+                    <div class="grid md:grid-cols-3 gap-6">
+                        <div class="text-center">
+                            <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-lightbulb text-2xl"></i>
+                            </div>
+                            <h4 class="font-semibold mb-2">Ағартушылық</h4>
+                            <p class="text-sm opacity-90">Білім мен ғылымның маңыздылығы, надандықпен күрес</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-users text-2xl"></i>
+                            </div>
+                            <h4 class="font-semibold mb-2">Ұлттық бірлік</h4>
+                            <p class="text-sm opacity-90">Рулық бөлінушілікті жеңу, ұлттық ынтымақ</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-flag text-2xl"></i>
+                            </div>
+                            <h4 class="font-semibold mb-2">Азаттық идеясы</h4>
+                            <p class="text-sm opacity-90">Отаршылдыққа қарсылық, рухани тәуелсіздік</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- VI. Қазақ әдебиетіне әсері -->
+        <section id="influence" class="py-20 md:py-28" style="background-color: var(--bg-color);">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16" data-aos="fade-up">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gradient">Қазақ әдебиетіне әсері</h2>
+                    <p class="mt-4 text-lg opacity-80">«Оян, Қазақ!» шығармасының кейінгі ұрпақ жазушыларына тигізген ықпалы</p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+                    <div class="card-3d p-6 rounded-xl shadow-lg" style="background-color: var(--bg-color); border: 1px solid var(--secondary-color);" data-aos="flip-up" data-aos-delay="100">
+                        <div class="text-center mb-4">
+                            <div class="w-20 h-20 rounded-full overflow-hidden mx-auto mb-4 shadow-lg border-2 border-[var(--primary-color)]">
+                                <img src="https://www.gov.kz/uploads/2022/3/6/a2108d033400a5391e64a003135a56e9_original.553526.jpg" 
+                                     alt="Ахмет Байтұрсынұлы" 
+                                     class="w-full h-full object-cover"
+                                     loading="lazy">
+                            </div>
+                            <h3 class="text-xl font-bold" style="color: var(--primary-color);">Ахмет Байтұрсынұлы</h3>
+                        </div>
+                        <p class="text-sm opacity-80 text-center">Міржақыптың ағартушылық идеяларын жалғастырып, «Маса» журналы арқылы халықты ағартуға үлес қосты.</p>
+                    </div>
+                    
+                    <div class="card-3d p-6 rounded-xl shadow-lg" style="background-color: var(--bg-color); border: 1px solid var(--secondary-color);" data-aos="flip-up" data-aos-delay="200">
+                        <div class="text-center mb-4">
+                            <div class="w-20 h-20 rounded-full overflow-hidden mx-auto mb-4 shadow-lg border-2 border-[var(--accent-color)]">
+                                <img src="https://adebiportal.kz/storage/tmp/resize/authors/1200_0_85d6fc69b6bcd88eb613a2bfb19a0c05.jpg" 
+                                     alt="Мағжан Жұмабаев" 
+                                     class="w-full h-full object-cover"
+                                     loading="lazy">
+                            </div>
+                            <h3 class="text-xl font-bold" style="color: var(--primary-color);">Мағжан Жұмабаев</h3>
+                        </div>
+                        <p class="text-sm opacity-80 text-center">Міржақыптың поэтикалық дәстүрін дамытып, ұлттық сана-сезімді оятуға бағытталған өлеңдер жазды.</p>
+                    </div>
+                    
+                    <div class="card-3d p-6 rounded-xl shadow-lg" style="background-color: var(--bg-color); border: 1px solid var(--secondary-color);" data-aos="flip-up" data-aos-delay="300">
+                        <div class="text-center mb-4">
+                            <div class="w-20 h-20 rounded-full overflow-hidden mx-auto mb-4 shadow-lg border-2 border-[var(--secondary-color)]">
+                                <img src="https://e-history.kz/media/upload/1299/2014/11/03/cb7ed133a463621d049c964826fcfb3d.jpg" 
+                                     alt="Жүсіпбек Аймауытұлы" 
+                                     class="w-full h-full object-cover"
+                                     loading="lazy">
+                            </div>
+                            <h3 class="text-xl font-bold" style="color: var(--primary-color);">Жүсіпбек Аймауытұлы</h3>
+                        </div>
+                        <p class="text-sm opacity-80 text-center">Міржақыптың драматургиялық дәстүрін жалғастырып, ұлттық театр өнерін дамытуға үлес қосты.</p>
+                    </div>
+                </div>
+                
+                <!-- Әдеби мектептер -->
+                <div class="bg-white rounded-2xl p-8 shadow-xl" data-aos="fade-up">
+                    <h3 class="text-2xl font-bold mb-8 text-center" style="color: var(--primary-color);">Әдеби мектептердің қалыптасуы</h3>
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div>
+                            <h4 class="text-lg font-semibold mb-4" style="color: var(--accent-color);">Алаш мектебі</h4>
+                            <ul class="space-y-2 text-sm opacity-80">
+                                <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mr-2 mt-1"></i>Ұлттық сана-сезімді оятуға бағытталған әдебиет</li>
+                                <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mr-2 mt-1"></i>Халықты ағартуға арналған дидактикалық шығармalar</li>
+                                <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mr-2 mt-1"></i>Қазақ тілінің байлығын көрсететін поэзия</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-semibold mb-4" style="color: var(--accent-color);">Жаңа әдебиет</h4>
+                            <ul class="space-y-2 text-sm opacity-80">
+                                <li class="flex items-start"><i class="fas fa-check-circle text-blue-500 mr-2 mt-1"></i>Еуропалық әдеби формалармен танысу</li>
+                                <li class="flex items-start"><i class="fas fa-check-circle text-blue-500 mr-2 mt-1"></i>Жаңа тақырыптар мен образдардың пайда болуы</li>
+                                <li class="flex items-start"><i class="fas fa-check-circle text-blue-500 mr-2 mt-1"></i>Әлеуметтік мәселелерді көтеру дәстүрі</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- VIII. Мультимедиа галерея -->
+        <section id="gallery" class="py-20 md:py-28" style="background-color: var(--bg-color);">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16" data-aos="fade-up">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gradient">Мультимедиа галерея</h2>
+                    <p class="mt-4 text-lg opacity-80">Тарихи фотосуреттер, құжаттар және материалдар</p>
+                </div>
+                
+                <!-- Фото галерея -->
+                <div class="mb-16">
+                    <h3 class="text-2xl font-bold mb-8 text-center" style="color: var(--primary-color);">Тарихи фотосуреттер</h3>
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <div class="card-3d rounded-xl overflow-hidden shadow-lg cursor-pointer hover:scale-105 transition-transform" data-aos="zoom-in" data-aos-delay="100" onclick="openGalleryItem('Міржақып Дулатұлы')">
+                            <div class="aspect-w-4 aspect-h-3 h-48 relative">
+                                <img src="https://adebiportal.kz/storage/tmp/resize/authors/1200_0_c3833bf7401be398e0d9dafd2f686c3f.jpg" 
+                                     alt="Міржақып Дулатұлы" 
+                                     class="w-full h-full object-cover"
+                                     loading="lazy">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                                <div class="absolute bottom-0 left-0 right-0 p-4 text-white">
+                                    <p class="text-sm font-medium">Міржақып Дулатұлы</p>
+                                    <p class="text-xs opacity-80">Портрет (1910-жж.)</p>
+                                </div>
+                                <div class="absolute top-2 right-2 bg-white bg-opacity-75 rounded-full p-2">
+                                    <i class="fas fa-expand-alt text-gray-600 text-xs"></i>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="card-3d rounded-xl overflow-hidden shadow-lg cursor-pointer hover:scale-105 transition-transform" data-aos="zoom-in" data-aos-delay="200" onclick="openGalleryItem('«Оян, Қазақ!» кітабы')">
+                            <div class="aspect-w-4 aspect-h-3 h-48 relative">
+                                <img src="https://infohub.kz/uploads/thumbnail/20240115120030056_big.jpg" 
+                                     alt="«Оян, Қазақ!» кітабы" 
+                                     class="w-full h-full object-cover"
+                                     loading="lazy">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                                <div class="absolute bottom-0 left-0 right-0 p-4 text-white">
+                                    <p class="text-sm font-medium">«Оян, Қазақ!» кітабы</p>
+                                    <p class="text-xs opacity-80">Алғашқы басылым (1909)</p>
+                                </div>
+                                <div class="absolute top-2 right-2 bg-white bg-opacity-75 rounded-full p-2">
+                                    <i class="fas fa-expand-alt text-gray-600 text-xs"></i>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="card-3d rounded-xl overflow-hidden shadow-lg cursor-pointer hover:scale-105 transition-transform" data-aos="zoom-in" data-aos-delay="300" onclick="openGalleryItem('Алаш қайраткерлері')">
+                            <div class="aspect-w-4 aspect-h-3 h-48 relative">
+                                <img src="https://gdb.rferl.org/82bd3c27-495e-4a39-9701-b6d8d020f92d_w1023_s.jpg" 
+                                     alt="Алаш қайраткерлері" 
+                                     class="w-full h-full object-cover"
+                                     loading="lazy">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                                <div class="absolute bottom-0 left-0 right-0 p-4 text-white">
+                                    <p class="text-sm font-medium">Алаш қайраткерлері</p>
+                                    <p class="text-xs opacity-80">Топтық сурет (1917)</p>
+                                </div>
+                                <div class="absolute top-2 right-2 bg-white bg-opacity-75 rounded-full p-2">
+                                    <i class="fas fa-expand-alt text-gray-600 text-xs"></i>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="card-3d rounded-xl overflow-hidden shadow-lg cursor-pointer hover:scale-105 transition-transform" data-aos="zoom-in" data-aos-delay="400" onclick="openGalleryItem('«Қазақ» газеті')">
+                            <div class="aspect-w-4 aspect-h-3 h-48 relative">
+                                <img src="https://qazaq1913.com/wp-content/uploads/2021/09/QG.jpg" 
+                                     alt="«Қазақ» газеті" 
+                                     class="w-full h-full object-cover"
+                                     loading="lazy">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                                <div class="absolute bottom-0 left-0 right-0 p-4 text-white">
+                                    <p class="text-sm font-medium">«Қазақ» газеті</p>
+                                    <p class="text-xs opacity-80">1913 жылғы шығарылым</p>
+                                </div>
+                                <div class="absolute top-2 right-2 bg-white bg-opacity-75 rounded-full p-2">
+                                    <i class="fas fa-expand-alt text-gray-600 text-xs"></i>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="card-3d rounded-xl overflow-hidden shadow-lg cursor-pointer hover:scale-105 transition-transform" data-aos="zoom-in" data-aos-delay="500" onclick="openGalleryItem('Торғай облысы')">
+                            <div class="aspect-w-4 aspect-h-3 h-48 relative">
+                                <img src="https://world-nan.kz/img/blogs/fcf005a9e585ae65bc6ecc6074e3c65b.jpg" 
+                                     alt="Торғай облысы" 
+                                     class="w-full h-full object-cover"
+                                     loading="lazy">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                                <div class="absolute bottom-0 left-0 right-0 p-4 text-white">
+                                    <p class="text-sm font-medium">Торғай облысы</p>
+                                    <p class="text-xs opacity-80">XIX ғасыр картасы</p>
+                                </div>
+                                <div class="absolute top-2 right-2 bg-white bg-opacity-75 rounded-full p-2">
+                                    <i class="fas fa-expand-alt text-gray-600 text-xs"></i>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="card-3d rounded-xl overflow-hidden shadow-lg cursor-pointer hover:scale-105 transition-transform" data-aos="zoom-in" data-aos-delay="600" onclick="openGalleryItem('Қолжазба')">
+                            <div class="aspect-w-4 aspect-h-3 h-48 relative">
+                                <img src="https://adebiportal.kz/upload/5/2018/05/04/be56adb3014ad355bcfcd945c83c0f96.jpg" 
+                                     alt="Қолжазба" 
+                                     class="w-full h-full object-cover"
+                                     loading="lazy">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                                <div class="absolute bottom-0 left-0 right-0 p-4 text-white">
+                                    <p class="text-sm font-medium">Қолжазба</p>
+                                    <p class="text-xs opacity-80">Міржақыптың жазбалары</p>
+                                </div>
+                                <div class="absolute top-2 right-2 bg-white bg-opacity-75 rounded-full p-2">
+                                    <i class="fas fa-expand-alt text-gray-600 text-xs"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Интерактивті карта -->
+                <div class="bg-gradient-to-br from-blue-50 to-indigo-100 rounded-2xl p-8" data-aos="fade-up">
+                    <h3 class="text-2xl font-bold mb-6 text-center text-blue-800">Міржақып Дулатұлының өмір жолы картасы</h3>
+                    <div class="bg-white rounded-xl p-6 shadow-inner">
+                        <div class="relative bg-gradient-to-br from-blue-100 to-green-100 rounded-lg h-96 overflow-hidden">
+                            <!-- SVG карта Казахстана -->
+                            <svg viewBox="0 0 800 400" class="w-full h-full">
+                                <!-- Фон карты -->
+                                <rect width="800" height="400" fill="url(#mapGradient)"/>
+                                
+                                <!-- Градиент для фона -->
+                                <defs>
+                                    <linearGradient id="mapGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" style="stop-color:#e0f2fe"/>
+                                        <stop offset="100%" style="stop-color:#b3e5fc"/>
+                                    </linearGradient>
+                                    <filter id="glow">
+                                        <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+                                        <feMerge> 
+                                            <feMergeNode in="coloredBlur"/>
+                                            <feMergeNode in="SourceGraphic"/>
+                                        </feMerge>
+                                    </filter>
+                                </defs>
+                                
+                                <!-- Контур Казахстана (упрощенный) -->
+                                <path d="M100,150 Q200,120 300,140 L400,130 Q500,125 600,140 L700,150 Q720,200 700,250 L650,300 Q550,320 450,310 L350,315 Q250,310 150,290 L100,250 Q80,200 100,150 Z" 
+                                      fill="#81c784" stroke="#4caf50" stroke-width="2" opacity="0.7"/>
+                                
+                                <!-- Маршрут путешествий -->
+                                <path id="journey-path" d="M200,200 Q300,180 400,190 Q500,200 600,220" 
+                                      stroke="#ff5722" stroke-width="3" fill="none" stroke-dasharray="10,5" opacity="0.8">
+                                    <animate attributeName="stroke-dashoffset" values="0;-30" dur="2s" repeatCount="indefinite"/>
+                                </path>
+                                
+                                <!-- Торғай (место рождения) -->
+                                <g class="map-location" data-location="torgay">
+                                    <circle cx="200" cy="200" r="8" fill="#2196f3" filter="url(#glow)">
+                                        <animate attributeName="r" values="8;12;8" dur="2s" repeatCount="indefinite"/>
+                                    </circle>
+                                    <text x="200" y="185" text-anchor="middle" class="text-xs font-bold fill-blue-800">Торғай</text>
+                                    <text x="200" y="220" text-anchor="middle" class="text-xs fill-blue-600">1885 - туған жері</text>
+                                </g>
+                                
+                                <!-- Омбы (учеба и работа) -->
+                                <g class="map-location" data-location="omsk">
+                                    <circle cx="400" cy="190" r="8" fill="#4caf50" filter="url(#glow)">
+                                        <animate attributeName="r" values="8;12;8" dur="2s" repeatCount="indefinite" begin="0.5s"/>
+                                    </circle>
+                                    <text x="400" y="175" text-anchor="middle" class="text-xs font-bold fill-green-800">Омбы</text>
+                                    <text x="400" y="210" text-anchor="middle" class="text-xs fill-green-600">1905-1917 - білім, жұмыс</text>
+                                </g>
+                                
+                                <!-- Соловки (ссылка) -->
+                                <g class="map-location" data-location="solovki">
+                                    <circle cx="600" cy="220" r="8" fill="#f44336" filter="url(#glow)">
+                                        <animate attributeName="r" values="8;12;8" dur="2s" repeatCount="indefinite" begin="1s"/>
+                                    </circle>
+                                    <text x="600" y="205" text-anchor="middle" class="text-xs font-bold fill-red-800">Соловки</text>
+                                    <text x="600" y="240" text-anchor="middle" class="text-xs fill-red-600">1930-1935 - қуғын</text>
+                                </g>
+                                
+                                <!-- Легенда -->
+                                <g class="map-legend">
+                                    <rect x="20" y="20" width="200" height="80" fill="white" fill-opacity="0.9" rx="8"/>
+                                    <text x="30" y="40" class="text-sm font-bold fill-gray-800">Өмір жолының кезеңдері:</text>
+                                    <circle cx="40" cy="55" r="4" fill="#2196f3"/>
+                                    <text x="50" y="60" class="text-xs fill-gray-700">Туған жері (1885)</text>
+                                    <circle cx="40" cy="70" r="4" fill="#4caf50"/>
+                                    <text x="50" y="75" class="text-xs fill-gray-700">Шығармашылық кезеңі</text>
+                                    <circle cx="40" cy="85" r="4" fill="#f44336"/>
+                                    <text x="50" y="90" class="text-xs fill-gray-700">Қуғын-сүргін</text>
+                                </g>
+                            </svg>
+                            
+                            <!-- Информационные панели -->
+                            <div id="location-info" class="absolute bottom-4 left-4 right-4 bg-white rounded-lg p-4 shadow-lg opacity-0 transition-all duration-300">
+                                <h4 id="info-title" class="font-bold text-lg mb-2"></h4>
+                                <p id="info-description" class="text-sm text-gray-600"></p>
+                                <div id="info-details" class="mt-2 text-xs text-gray-500"></div>
+                            </div>
+                        </div>
+                        
+                        <!-- Временная шкала под картой -->
+                        <div class="mt-6 bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg p-4">
+                            <h4 class="font-bold text-center mb-4 text-gray-800">Хронология жизни</h4>
+                            <div class="flex justify-between items-center relative">
+                                <div class="absolute top-1/2 left-0 right-0 h-0.5 bg-gradient-to-r from-blue-400 to-purple-400"></div>
+                                
+                                <div class="timeline-point bg-blue-500 text-white rounded-full w-12 h-12 flex items-center justify-center text-xs font-bold relative z-10">
+                                    1885
+                                </div>
+                                <div class="timeline-point bg-green-500 text-white rounded-full w-12 h-12 flex items-center justify-center text-xs font-bold relative z-10">
+                                    1905
+                                </div>
+                                <div class="timeline-point bg-yellow-500 text-white rounded-full w-12 h-12 flex items-center justify-center text-xs font-bold relative z-10">
+                                    1909
+                                </div>
+                                <div class="timeline-point bg-orange-500 text-white rounded-full w-12 h-12 flex items-center justify-center text-xs font-bold relative z-10">
+                                    1917
+                                </div>
+                                <div class="timeline-point bg-red-500 text-white rounded-full w-12 h-12 flex items-center justify-center text-xs font-bold relative z-10">
+                                    1930
+                                </div>
+                            </div>
+                            
+                            <div class="flex justify-between mt-2 text-xs text-gray-600">
+                                <div class="text-center">Туу</div>
+                                <div class="text-center">Білім</div>
+                                <div class="text-center">"Оян, Қазақ!"</div>
+                                <div class="text-center">Алаш</div>
+                                <div class="text-center">Қуғын</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- IX. Басқа шығармалары -->
+        <section id="other-works" class="py-20 md:py-28 bg-white">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16" data-aos="fade-up">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gradient">Міржақып Дулатұлының басқа шығармалары</h2>
+                    <p class="mt-4 text-lg opacity-80">«Оян, Қазақ!» кітабынан басқа да маңызды еңбектері</p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="card-3d bg-gradient-to-br from-amber-50 to-orange-100 rounded-2xl p-6 shadow-lg" data-aos="flip-left" data-aos-delay="100">
+                        <div class="text-center mb-4">
+                            <h3 class="text-xl font-bold" style="color: var(--primary-color);">«Бақытсыз Жамал»</h3>
+                            <p class="text-sm opacity-60">1910 жыл</p>
+                        </div>
+                        <p class="text-sm opacity-80 text-center mb-4">Қазақ қыздарының тағдыры туралы драмалық шығарма. Әйелдердің құқықтары мен білім алу мәселесін көтереді.</p>
+                        <div class="text-center">
+                            <span class="inline-block px-3 py-1 bg-amber-200 text-amber-800 rounded-full text-xs">Драма</span>
+                        </div>
+                    </div>
+                    
+                    <div class="card-3d bg-gradient-to-br from-emerald-50 to-green-100 rounded-2xl p-6 shadow-lg" data-aos="flip-left" data-aos-delay="200">
+                        <div class="text-center mb-4">
+                            <h3 class="text-xl font-bold" style="color: var(--primary-color);">«Терме»</h3>
+                            <p class="text-sm opacity-60">1911 жыл</p>
+                        </div>
+                        <p class="text-sm opacity-80 text-center mb-4">Қазақ халқының дәстүрлі өмір салты мен жаңа заман арасындағы қайшылықты бейнелейтін поэма.</p>
+                        <div class="text-center">
+                            <span class="inline-block px-3 py-1 bg-emerald-200 text-emerald-800 rounded-full text-xs">Поэма</span>
+                        </div>
+                    </div>
+                    
+                    <div class="card-3d bg-gradient-to-br from-blue-50 to-indigo-100 rounded-2xl p-6 shadow-lg" data-aos="flip-left" data-aos-delay="300">
+                        <div class="text-center mb-4">
+                            <h3 class="text-xl font-bold" style="color: var(--primary-color);">Публицистикалық мақалалар</h3>
+                            <p class="text-sm opacity-60">1907-1917 жж.</p>
+                        </div>
+                        <p class="text-sm opacity-80 text-center mb-4">«Қазақ» газетінде жарияланған әлеуметтік-саяси мәселелерге арналған мақалалар жинағы.</p>
+                        <div class="text-center">
+                            <span class="inline-block px-3 py-1 bg-blue-200 text-blue-800 rounded-full text-xs">Публицистика</span>
+                        </div>
+                    </div>
+                    
+                    <div class="card-3d bg-gradient-to-br from-purple-50 to-violet-100 rounded-2xl p-6 shadow-lg" data-aos="flip-left" data-aos-delay="400">
+                        <div class="text-center mb-4">
+                            <h3 class="text-xl font-bold" style="color: var(--primary-color);">Лирикалық өлеңдер</h3>
+                            <p class="text-sm opacity-60">1905-1915 жж.</p>
+                        </div>
+                        <p class="text-sm opacity-80 text-center mb-4">Махаббат, табиғат және отан сүйгіштік тақырыбындағы лирикалық шығармалар.</p>
+                        <div class="text-center">
+                            <span class="inline-block px-3 py-1 bg-purple-200 text-purple-800 rounded-full text-xs">Лирика</span>
+                        </div>
+                    </div>
+                    
+                    <div class="card-3d bg-gradient-to-br from-rose-50 to-pink-100 rounded-2xl p-6 shadow-lg" data-aos="flip-left" data-aos-delay="500">
+                        <div class="text-center mb-4">
+                            <h3 class="text-xl font-bold" style="color: var(--primary-color);">Аудармалар</h3>
+                            <p class="text-sm opacity-60">1908-1912 жж.</p>
+                        </div>
+                        <p class="text-sm opacity-80 text-center mb-4">Орыс және араб тіліндегі классикалық шығармаларды қазақ тіліне аударған еңбектері.</p>
+                        <div class="text-center">
+                            <span class="inline-block px-3 py-1 bg-rose-200 text-rose-800 rounded-full text-xs">Аударма</span>
+                        </div>
+                    </div>
+                    
+                    <div class="card-3d bg-gradient-to-br from-teal-50 to-cyan-100 rounded-2xl p-6 shadow-lg" data-aos="flip-left" data-aos-delay="600">
+                        <div class="text-center mb-4">
+                            <h3 class="text-xl font-bold" style="color: var(--primary-color);">Оқулықтар</h3>
+                            <p class="text-sm opacity-60">1910-1914 жж.</p>
+                        </div>
+                        <p class="text-sm opacity-80 text-center mb-4">Қазақ балаларына арналған оқу-ағарту құралдары мен әліпби кітаптары.</p>
+                        <div class="text-center">
+                            <span class="inline-block px-3 py-1 bg-teal-200 text-teal-800 rounded-full text-xs">Оқулық</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Шығармашылық кезеңдері -->
+                <div class="mt-16 bg-gradient-to-r from-indigo-100 to-purple-100 rounded-2xl p-8" data-aos="fade-up">
+                    <h3 class="text-2xl font-bold mb-8 text-center text-indigo-800">Шығармашылық кезеңдері</h3>
+                    <div class="grid md:grid-cols-3 gap-8">
+                        <div class="text-center">
+                            <div class="w-20 h-20 bg-gradient-to-br from-green-400 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <span class="text-white font-bold text-lg">I</span>
+                            </div>
+                            <h4 class="font-bold mb-2 text-green-700">Қалыптасу кезеңі</h4>
+                            <p class="text-sm text-green-600 mb-2">1905-1909 жж.</p>
+                            <p class="text-sm opacity-80">Алғашқы өлеңдер мен аудармалар. Ұлттық сананың оянуы.</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="w-20 h-20 bg-gradient-to-br from-blue-400 to-indigo-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <span class="text-white font-bold text-lg">II</span>
+                            </div>
+                            <h4 class="font-bold mb-2 text-blue-700">Шығармашылық шыңы</h4>
+                            <p class="text-sm text-blue-600 mb-2">1909-1917 жж.</p>
+                            <p class="text-sm opacity-80">«Оян, Қазақ!», драмалар мен публицистикалық еңбектер.</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="w-20 h-20 bg-gradient-to-br from-purple-400 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <span class="text-white font-bold text-lg">III</span>
+                            </div>
+                            <h4 class="font-bold mb-2 text-purple-700">Соңғы жылдар</h4>
+                            <p class="text-sm text-purple-600 mb-2">1917-1935 жж.</p>
+                            <p class="text-sm opacity-80">Саяси қызмет, қуғын-сүргін және мұраның сақталуы.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- X. Замандастарының пікірлері -->
+        <section id="testimonials" class="py-20 md:py-28" style="background-color: var(--bg-color);">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16" data-aos="fade-up">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gradient">Замандастарының пікірлері</h2>
+                    <p class="mt-4 text-lg opacity-80">Міржақып Дулатұлы туралы серіктестері мен зерттеушілердің пікірлері</p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-8 mb-12">
+                    <div class="bg-white rounded-2xl p-8 shadow-xl" data-aos="slide-right">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-16 h-16 rounded-full overflow-hidden flex-shrink-0 shadow-lg border-2 border-blue-200">
+                                <img src="https://cbs-osakarovka.kz/files/userfiles/news/db/pisateli/49792f0fc6f4fba1772c346cbf755cdaedb38e1f94275eb90e_pimgpsh_fullsize_distr.jpg" 
+                                     alt="Әлихан Бөкейханұлы" 
+                                     class="w-full h-full object-cover"
+                                     loading="lazy">
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold mb-2" style="color: var(--primary-color);">Әлихан Бөкейханұлы</h4>
+                                <p class="text-sm opacity-60 mb-3">Алаш қозғалысының көшбасшысы</p>
+                                <blockquote class="text-sm italic opacity-80 leading-relaxed">
+                                    "Міржақып - біздің ұлттың рухани жаңғыртушысы. Оның «Оян, Қазақ!» шығармасы халқымызды терең ұйқыдан оятқан дабыл болды. Ол тек ақын ғана емес, ұлт ұстазы еді."
+                                </blockquote>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-2xl p-8 shadow-xl" data-aos="slide-left">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-16 h-16 rounded-full overflow-hidden flex-shrink-0 shadow-lg border-2 border-green-200">
+                                <img src="https://www.gov.kz/uploads/2022/3/6/a2108d033400a5391e64a003135a56e9_original.553526.jpg" 
+                                     alt="Ахмет Байтұрсынұлы" 
+                                     class="w-full h-full object-cover"
+                                     loading="lazy">
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold mb-2" style="color: var(--primary-color);">Ахмет Байтұрсынұлы</h4>
+                                <p class="text-sm opacity-60 mb-3">Қазақ тіл білімінің негізін қалаушы</p>
+                                <blockquote class="text-sm italic opacity-80 leading-relaxed">
+                                    "Міржақыптың еңбектері - қазақ әдебиетінің алтын қоры. Ол халқымызға білім мен мәдениеттің қажеттілігін түсіндіре білді. Оның ізімен жүру - біздің парызымыз."
+                                </blockquote>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-2xl p-8 shadow-xl" data-aos="slide-right">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-16 h-16 rounded-full overflow-hidden flex-shrink-0 shadow-lg border-2 border-purple-200">
+                                <img src="https://adebiportal.kz/storage/tmp/resize/authors/1200_0_85d6fc69b6bcd88eb613a2bfb19a0c05.jpg" 
+                                     alt="Мағжан Жұмабаев" 
+                                     class="w-full h-full object-cover"
+                                     loading="lazy">
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold mb-2" style="color: var(--primary-color);">Мағжан Жұмабаев</h4>
+                                <p class="text-sm opacity-60 mb-3">Қазақ поэзиясының классигі</p>
+                                <blockquote class="text-sm italic opacity-80 leading-relaxed">
+                                    "Міржақып ағамыз - қазақ поэзиясының жаңа дәуірін ашқан тұлға. Оның өлеңдері халқымыздың жанына жетеді, жүрегін қозғайды. Ол - шын мәнінде халық ақыны."
+                                </blockquote>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-2xl p-8 shadow-xl" data-aos="slide-left">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-16 h-16 rounded-full overflow-hidden flex-shrink-0 shadow-lg border-2 border-amber-200">
+                                <img src="https://upload.wikimedia.org/wikipedia/kk/a/ab/%D0%A2%D2%B1%D1%80%D1%81%D1%8B%D0%BD_%D0%96%D2%B1%D1%80%D1%82%D0%B1%D0%B0%D0%B9.jpg" 
+                                     alt="Тұрсын Жұртбай" 
+                                     class="w-full h-full object-cover"
+                                     loading="lazy">
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold mb-2" style="color: var(--primary-color);">Тұрсын Жұртбай</h4>
+                                <p class="text-sm opacity-60 mb-3">Әдебиеттанушы, ғылым докторы</p>
+                                <blockquote class="text-sm italic opacity-80 leading-relaxed">
+                                    "Осы «Оян, қазақ» пен «Бақытсыз Жамал» қазақтың жүрегіне жол тапқан алғашқы көркем шығарма болып табылады. Осы кітаптар арқылы қазақтың ішінде ояну, гүлдену, өркениетке ұмтылу деген аңсар пайда болды."
+                                </blockquote>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Статистика -->
+                <div class="bg-gradient-to-r from-stone-100 to-amber-50 rounded-2xl p-8 text-stone-800" data-aos="zoom-in">
+                    <h3 class="text-2xl font-bold mb-8 text-center">Міржақып Дулатұлының мұрасы сандармен</h3>
+                    <div class="grid md:grid-cols-4 gap-8">
+                        <div class="text-center">
+                            <div class="text-4xl font-bold mb-2">50+</div>
+                            <p class="text-sm opacity-90">Жазылған шығармалар</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-4xl font-bold mb-2">15</div>
+                            <p class="text-sm opacity-90">Жарияланған кітаптар</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-4xl font-bold mb-2">100+</div>
+                            <p class="text-sm opacity-90">Ғылыми зерттеулер</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-4xl font-bold mb-2">25+</div>
+                            <p class="text-sm opacity-90">Тілге аударылған</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- XI. Мәңгілік мұра -->
+        <section id="legacy" class="py-20 md:py-28">
+             <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16 fade-in">
+                    <h2 class="text-3xl md:text-4xl font-bold text-[#A99B85]">Мәңгілік мұра</h2>
+                    <p class="mt-4 text-lg text-gray-700 max-w-3xl mx-auto">Қуғын-сүргінге ұшырап, ұзақ жылдар ұмыттырылғанымен, азаттық рухының өшпейтіндігін дәлелдеп, тәуелсіздік жолындағы ұрпақтарға рухани шамшырақ болды.</p>
+                </div>
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div class="space-y-4 text-gray-800 leading-relaxed fade-in">
+                        <h3 class="text-xl font-bold font-serif">Кеңес дәуіріндегі тыйым</h3>
+                        <p>Кеңес билігі орнағаннан кейін Міржақып «халық жауы» деп жарияланып, шығармаларына қатаң тыйым салынды. 1928 жылы тұтқындалып, 1935 жылы лагерьде көз жұмды. Жарты ғасырдан астам уақыт «Оян, Қазақ!» кітабын сақтаудың өзі қылмыс саналды.</p>
+                        <h3 class="text-xl font-bold font-serif pt-4">Қайта оралу және бүгінгі маңызы</h3>
+                        <p>1988 жылы ресми ақталуы – ұлттың тарихи жадының қалпына келуіндегі бетбұрысты сәт болды. «Оян, Қазақ!» ұраны Қазақстанның тәуелсіздікке жетуіне алып келген ұлттық оянудың символына айналды. Оның білім, бірлік, тіл мен жер туралы ойлары бүгінгі қоғам үшін де маңызды бағдар болып қала береді.</p>
+                    </div>
+                    <div class="fade-in">
+                        <div class="chart-container relative h-[400px] w-full max-w-lg mx-auto">
+                            <canvas id="legacyChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- VII. Мұраның сақталуы -->
+        <section id="sources" class="py-20 md:py-28 bg-white">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                 <div class="mb-12 fade-in">
+                    <h2 class="text-3xl md:text-4xl font-bold text-[#A99B85]">Мұраның сақталуы: Тереңірек үңілу</h2>
+                    <p class="mt-4 text-lg text-gray-700 max-w-3xl mx-auto">Бүгінде Міржақып Дулатұлының мұрасы – Қазақстанның ұлттық игілігі. Оның еңбектерімен еліміздің басты зияткерлік орталықтарында танысуға болады.</p>
+                </div>
+                <div class="grid md:grid-cols-2 gap-8 fade-in">
+                    <div class="bg-gray-50 p-8 rounded-lg">
+                        <h3 class="text-xl font-bold mb-3 font-serif">Ұлттық кітапхана</h3>
+                        <p class="text-gray-600 mb-4">Алматыда орналасқан ҚР Ұлттық кітапханасы Алаш кезеңінің сирек кездесетін тарихи мәтіндерін сақтайтын басты физикалық қойма болып табылады.</p>
+                        <a href="https://www.nlrk.kz/" target="_blank" class="font-bold text-[#A99B85] hover:underline">Кітапханаға бару &rarr;</a>
+                    </div>
+                    <div class="bg-gray-50 p-8 rounded-lg">
+                        <h3 class="text-xl font-bold mb-3 font-serif">ҚазҰЭК</h3>
+                        <p class="text-gray-600 mb-4">Қазақстан Ұлттық Электрондық Кітапханасы (kazneb.kz) Дулатұлының еңбектеріне әлемнің кез келген нүктесінен қол жеткізуге мүмкіндік береді.</p>
+                        <a href="https://kazneb.kz/" target="_blank" class="font-bold text-[#A99B85] hover:underline">Мұрағатты зерттеу &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Білім беру материалдары -->
+        <section id="education" class="py-20 md:py-28 bg-white">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16" data-aos="fade-up">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gradient">
+                        <i class="fas fa-graduation-cap mr-3"></i>
+                        Білім беру материалдары
+                    </h2>
+                    <p class="mt-4 text-lg opacity-80">Оқушылар мен студенттерге арналған интерактивті тапсырмалар</p>
+                </div>
+                
+                <div class="max-w-2xl mx-auto mb-12">
+                    <!-- Тест сұрақтары -->
+                    <div data-aos="fade-up">
+                        <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-8">
+                            <h3 class="text-2xl font-bold mb-6 text-blue-800 text-center">
+                                <i class="fas fa-question-circle mr-2"></i>
+                                Тест сұрақтары
+                            </h3>
+                            <div class="space-y-4">
+                                <div class="quiz-question p-4 bg-white rounded-lg shadow-sm">
+                                    <p class="font-medium mb-3">1. «Оян, Қазақ!» шығармасы қай жылы жарық көрді?</p>
+                                    <div class="space-y-2">
+                                        <label class="flex items-center cursor-pointer">
+                                            <input type="radio" name="q1" value="a" class="mr-2">
+                                            <span>а) 1907 жылы</span>
+                                        </label>
+                                        <label class="flex items-center cursor-pointer">
+                                            <input type="radio" name="q1" value="b" class="mr-2">
+                                            <span>б) 1909 жылы</span>
+                                        </label>
+                                        <label class="flex items-center cursor-pointer">
+                                            <input type="radio" name="q1" value="c" class="mr-2">
+                                            <span>в) 1911 жылы</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                
+                                <div class="quiz-question p-4 bg-white rounded-lg shadow-sm">
+                                    <p class="font-medium mb-3">2. Міржақып Дулатұлы қай облыста туған?</p>
+                                    <div class="space-y-2">
+                                        <label class="flex items-center cursor-pointer">
+                                            <input type="radio" name="q2" value="a" class="mr-2">
+                                            <span>а) Торғай облысы</span>
+                                        </label>
+                                        <label class="flex items-center cursor-pointer">
+                                            <input type="radio" name="q2" value="b" class="mr-2">
+                                            <span>б) Жетісу облысы</span>
+                                        </label>
+                                        <label class="flex items-center cursor-pointer">
+                                            <input type="radio" name="q2" value="c" class="mr-2">
+                                            <span>в) Сырдария облысы</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                
+                                <div class="quiz-question p-4 bg-white rounded-lg shadow-sm">
+                                    <p class="font-medium mb-3">3. Алаш қозғалысының негізгі мақсаты не болды?</p>
+                                    <div class="space-y-2">
+                                        <label class="flex items-center cursor-pointer">
+                                            <input type="radio" name="q3" value="a" class="mr-2">
+                                            <span>а) Қазақ халқының ұлттық автономиясын құру</span>
+                                        </label>
+                                        <label class="flex items-center cursor-pointer">
+                                            <input type="radio" name="q3" value="b" class="mr-2">
+                                            <span>б) Орыс империясымен күресу</span>
+                                        </label>
+                                        <label class="flex items-center cursor-pointer">
+                                            <input type="radio" name="q3" value="c" class="mr-2">
+                                            <span>в) Дін саласын реформалау</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                
+                                <div class="quiz-question p-4 bg-white rounded-lg shadow-sm">
+                                    <p class="font-medium mb-3">4. «Оян, Қазақ!» шығармасының негізгі идеясы қандай?</p>
+                                    <div class="space-y-2">
+                                        <label class="flex items-center cursor-pointer">
+                                            <input type="radio" name="q4" value="a" class="mr-2">
+                                            <span>а) Халықты білім алуға шақыру</span>
+                                        </label>
+                                        <label class="flex items-center cursor-pointer">
+                                            <input type="radio" name="q4" value="b" class="mr-2">
+                                            <span>б) Дәстүрлі өмір салтын сақтау</span>
+                                        </label>
+                                        <label class="flex items-center cursor-pointer">
+                                            <input type="radio" name="q4" value="c" class="mr-2">
+                                            <span>в) Ауыл шаруашылығын дамыту</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                
+                                <div class="quiz-question p-4 bg-white rounded-lg shadow-sm">
+                                    <p class="font-medium mb-3">5. Міржақып Дулатұлы қай жылы қайтыс болды?</p>
+                                    <div class="space-y-2">
+                                        <label class="flex items-center cursor-pointer">
+                                            <input type="radio" name="q5" value="a" class="mr-2">
+                                            <span>а) 1932 жылы</span>
+                                        </label>
+                                        <label class="flex items-center cursor-pointer">
+                                            <input type="radio" name="q5" value="b" class="mr-2">
+                                            <span>б) 1935 жылы</span>
+                                        </label>
+                                        <label class="flex items-center cursor-pointer">
+                                            <input type="radio" name="q5" value="c" class="mr-2">
+                                            <span>в) 1938 жылы</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                
+                                <button onclick="checkQuiz()" class="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition-colors">
+                                    Жауаптарды тексеру
+                                </button>
+                                <div id="quiz-result" class="hidden p-4 rounded-lg"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-[#F9F6F2] border-t border-[#D4C8B5] py-8">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-600">
+            <p>&copy; 2025. Тарихи-танымдық лендинг. Міржақып Дулатұлының мұрасына арналады.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.fade-in').forEach(el => {
+                observer.observe(el);
+            });
+            
+            const chartObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        renderLegacyChart();
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.5 });
+            
+            const chartCanvas = document.getElementById('legacyChart');
+            if(chartCanvas) {
+                chartObserver.observe(chartCanvas);
+            }
+
+        });
+        
+        function renderLegacyChart() {
+            const ctx = document.getElementById('legacyChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['Патша үкіметі (1909-1917)', 'Алашорда (1917-1920)', 'Кеңес үкіметі (1920-1988)', 'Тәуелсіздік (1988-бүгін)'],
+                    datasets: [{
+                        label: 'Идеялардың таралуы',
+                        data: [40, 75, 5, 100],
+                        backgroundColor: [
+                            '#D4C8B5',
+                            '#A99B85',
+                            '#6b5d4a',
+                            '#8e7f69'
+                        ],
+                        borderColor: '#F9F6F2',
+                        borderWidth: 2
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    indexAxis: 'y',
+                    plugins: {
+                        legend: {
+                            display: false
+                        },
+                        title: {
+                            display: true,
+                            text: 'Міржақып мұрасының тарихи кезеңдердегі рөлі',
+                            font: {
+                                size: 16,
+                                family: "'Merriweather', serif"
+                            },
+                            color: '#3D352A'
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    const value = context.raw;
+                                    let status = '';
+                                    if (value <= 10) status = ' (Қатаң тыйым)';
+                                    else if (value <= 50) status = ' (Таралуы шектелген)';
+                                    else if (value <= 80) status = ' (Белсенді таралу)';
+                                    else status = ' (Толық мойындалу)';
+                                    return `Бағасы: ${value}% ${status}`;
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        x: {
+                           ticks: {
+                               callback: function(value) {
+                                   return value + '%'
+                               }
+                           }
+                        }
+                    }
+                }
+            });
+        }
+        
+        // Add quote navigation button styles
+        const style = document.createElement('style');
+        style.textContent = `
+            .quote-nav-btn {
+                width: 12px;
+                height: 12px;
+                border-radius: 50%;
+                border: 2px solid var(--primary-color);
+                background: transparent;
+                cursor: pointer;
+                transition: all 0.3s ease;
+                font-size: 0;
+            }
+            
+            .quote-nav-btn.active {
+                background: var(--primary-color);
+                transform: scale(1.2);
+            }
+            
+            .quote-nav-btn:hover {
+                transform: scale(1.1);
+                box-shadow: 0 0 10px var(--shadow-medium);
+            }
+        `;
+        document.head.appendChild(style);
+        
+        // Interactive Map functionality
+        const mapLocations = {
+            torgay: {
+                title: "Торғай облысы",
+                description: "Міржақып Дулатұлының туған жері. Мұнда ол 1885 жылы дүниеге келді және балалық шағын өткізді.",
+                details: "Қазіргі Қостанай облысы аумағы. Дала мен ауыл өмірінің дәстүрлері ақынның дүниетанымын қалыптастырды."
+            },
+            omsk: {
+                title: "Омбы қаласы",
+                description: "Міржақып мұнда білім алып, мұғалім болып жұмыс істеді. Шығармашылығының ең жемісті кезеңі.",
+                details: "1905-1917 жылдар аралығында 'Қазақ' газетінде жұмыс істеп, көптеген шығармаларын жазды."
+            },
+            solovki: {
+                title: "Соловки аралдары",
+                description: "Міржақыптың өмірінің соңғы кезеңі. Мұнда ол саяси қуғын-сүргінге ұшырады.",
+                details: "1930-1935 жылдар. Ауыр жағдайларға қарамастан, рухани күшін жоғалтпады."
+            }
+        };
+
+        // Map interaction
+        document.addEventListener('DOMContentLoaded', function() {
+            const mapLocationElements = document.querySelectorAll('.map-location');
+            const locationInfo = document.getElementById('location-info');
+            const infoTitle = document.getElementById('info-title');
+            const infoDescription = document.getElementById('info-description');
+            const infoDetails = document.getElementById('info-details');
+
+            mapLocationElements.forEach(location => {
+                location.addEventListener('mouseenter', function() {
+                    const locationKey = this.getAttribute('data-location');
+                    const locationData = mapLocations[locationKey];
+                    
+                    if (locationData) {
+                        infoTitle.textContent = locationData.title;
+                        infoDescription.textContent = locationData.description;
+                        infoDetails.textContent = locationData.details;
+                        locationInfo.style.opacity = '1';
+                    }
+                });
+
+                location.addEventListener('mouseleave', function() {
+                    locationInfo.style.opacity = '0';
+                });
+
+                // Add click functionality for mobile
+                location.addEventListener('click', function() {
+                    const locationKey = this.getAttribute('data-location');
+                    const locationData = mapLocations[locationKey];
+                    
+                    if (locationData) {
+                        infoTitle.textContent = locationData.title;
+                        infoDescription.textContent = locationData.description;
+                        infoDetails.textContent = locationData.details;
+                        locationInfo.style.opacity = locationInfo.style.opacity === '1' ? '0' : '1';
+                    }
+                });
+            });
+        });
+
+        // Gallery Lightbox functionality
+        function createLightbox() {
+            const lightboxHTML = `
+                <div id="lightbox" class="fixed inset-0 bg-black bg-opacity-75 z-50 hidden flex items-center justify-center p-4">
+                    <div class="relative max-w-4xl max-h-full bg-white rounded-lg overflow-hidden">
+                        <button id="closeLightbox" class="absolute top-4 right-4 text-white bg-black bg-opacity-50 rounded-full w-10 h-10 flex items-center justify-center hover:bg-opacity-75 z-10">
+                            <i class="fas fa-times"></i>
+                        </button>
+                        <div id="lightboxContent" class="p-6">
+                            <div class="aspect-w-16 aspect-h-9 bg-gradient-to-br from-gray-100 to-gray-200 rounded-lg flex items-center justify-center mb-4">
+                                <div id="lightboxImage" class="text-center">
+                                    <i class="fas fa-image text-6xl text-gray-400 mb-4"></i>
+                                    <h3 id="lightboxTitle" class="text-xl font-bold mb-2"></h3>
+                                    <p id="lightboxDescription" class="text-gray-600"></p>
+                                </div>
+                            </div>
+                            <div id="lightboxDetails" class="bg-gray-50 rounded-lg p-4">
+                                <h4 class="font-semibold mb-2">Толық ақпарат:</h4>
+                                <p id="lightboxFullDescription" class="text-sm text-gray-700"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+            document.body.insertAdjacentHTML('beforeend', lightboxHTML);
+
+            // Close lightbox functionality
+            document.getElementById('closeLightbox').addEventListener('click', closeLightbox);
+            document.getElementById('lightbox').addEventListener('click', function(e) {
+                if (e.target === this) closeLightbox();
+            });
+        }
+
+        function openLightbox(title, description, fullDescription) {
+            const lightbox = document.getElementById('lightbox');
+            document.getElementById('lightboxTitle').textContent = title;
+            document.getElementById('lightboxDescription').textContent = description;
+            document.getElementById('lightboxFullDescription').textContent = fullDescription;
+            lightbox.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            lightbox.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Gallery items data
+        const galleryItems = {
+            'Міржақып Дулатұлы': {
+                description: 'Портрет (1910-жж.)',
+                fullDescription: 'Міржақып Дулатұлының ресми портреті. 1910 жылдары түсірілген. Ақынның зияткерлік бейнесін көрсетеді. Сол кездегі қазақ интеллигенциясының өкілі ретінде дәстүрлі киім киген. Портретте ақынның терең ойлы көзі мен мәдениетті бейнесі көрінеді.'
+            },
+            '«Оян, Қазақ!» кітабы': {
+                description: 'Алғашқы басылым (1909)',
+                fullDescription: '1909 жылы жарық көрген тарихи шығарма. Қазақ халқын ұлттық санаға шақырған алғашқы еңбектердің бірі. Кітап қолжазба түрінде таралып, үлкен әсер етті. Алғашқы басылымы аз тиражбен шыққанымен, халық арасында кеңінен таралды.'
+            },
+            'Алаш қайраткерлері': {
+                description: 'Топтық сурет (1917)',
+                fullDescription: 'Алаш қозғалысының көшбасшылары. Міржақып Дулатұлы (ортада), Әлихан Бөкейханұлы, Ахмет Байтұрсынұлы және басқа қайраткерлер. 1917 жылғы Алаш съезінен кейін түсірілген. Бұл сурет қазақ ұлттық қозғалысының тарихи маңыздылығын көрсетеді.'
+            },
+            '«Қазақ» газеті': {
+                description: '1913 жылғы шығарылым',
+                fullDescription: '«Қазақ» газеті - қазақ тіліндегі алғашқы саяси газет. 1913-1918 жылдар аралығында шығарылды. Міржақып Дулатұлы осы газетте көптеген мақалаларын жариялады. Газет қазақ халқының ұлттық санасын оятуда маңызды рөл атқарды. Бұл нақты 1913 жылғы шығарылым - тарихи құжат.'
+            },
+            'Торғай облысы': {
+                description: 'XIX ғасыр картасы',
+                fullDescription: 'Торғай облысы - Міржақып Дулатұлының туған жері. XIX ғасырдағы карта бойынша бұл аймақ дала мен ауыл шаруашылығымен айналысатын қазақтардың мекені болған. Осы жердің табиғаты мен мәдениеті ақынның дүниетанымын қалыптастырды. Картада көрсетілген аумақ қазіргі Қостанай облысының бөлігі.'
+            },
+            'Қолжазба': {
+                description: 'Міржақыптың жазбалары',
+                fullDescription: 'Міржақып Дулатұлының қолжазбалары - оның шығармашылық процесін көрсететін құнды материалдар. Қолжазбаларда түзетулер мен қосымшалар бар, бұл ақынның еңбекқорлығын дәлелдейді. Кейбір шығармалар тек қолжазба түрінде сақталған. Бұл нақты қолжазба Adebi Portal мұрағатынан алынған.'
+            }
+        };
+
+        function openGalleryItem(title) {
+            const item = galleryItems[title];
+            if (item) {
+                openLightbox(title, item.description, item.fullDescription);
+            }
+        }
+
+        // Document viewer functionality
+        const documentData = {
+            'arrest': {
+                title: 'Тұтқындау туралы құжат',
+                content: 'Патша үкіметінің 1910 жылғы 15 мамырдағы № 2847 бұйрығы. Міржақып Дулатұлын "мемлекетке қарсы қызмет" айыбымен тұтқындау туралы. Құжатта оның "Оян, Қазақ!" шығармасы "халықты үкіметке қарсы қоздыратын" деп көрсетілген.',
+                details: 'Бұл құжат Міржақыптың саяси қуғын-сүргінге ұшырауының басталуын көрсетеді. Патша үкіметі оның ағартушылық қызметін қауіпті деп санады.'
+            },
+            'rehabilitation': {
+                title: 'Ақталу туралы құжат',
+                content: 'КСРО Жоғарғы Сотының 1988 жылғы 12 желтоқсандағы қаулысы. Міржақып Дулатұлы толық ақталды. Барлық айыптар негізсіз деп танылды.',
+                details: 'Кеңес дәуірінің соңында көптеген саяси қуғын-сүргін құрбандары ақталды. Міржақыптың да есімі қалпына келтірілді.'
+            }
+        };
+
+        function openDocumentViewer(docKey) {
+            const doc = documentData[docKey];
+            if (doc) {
+                openLightbox(doc.title, doc.content, doc.details);
+            }
+        }
+
+        // Works detail functionality
+        const worksDetails = {
+            'Бақытсыз Жамал': {
+                genre: 'Драма',
+                year: '1910',
+                description: 'Қазақ қыздарының тағдыры туралы драмалық шығарма. Әйелдердің құқықтары мен білім алу мәселесін көтереді.',
+                fullContent: 'Бұл шығарма қазақ әйелдерінің ауыр тағдырын бейнелейді. Жамал - білімді, ақылды қыз, бірақ дәстүрлі қоғам оны бақытсыздыққа итермелейді. Міржақып мұнда әйелдердің теңдігі мен білім алу құқығын қорғайды. Шығарма қазақ драматургиясының дамуына үлкен үлес қосты.'
+            },
+            'Терме': {
+                genre: 'Поэма',
+                year: '1911',
+                description: 'Қазақ халқының дәстүрлі өмір салты мен жаңа заман арасындағы қайшылықты бейнелейтін поэма.',
+                fullContent: 'Поэмада қазақ қоғамының өзгеру кезеңі суреттеледі. Терме - дәстүрлі қазақ тұрмысының символы. Міржақып жаңа заман талаптарымен ескі дәстүрлердің арасындағы тепе-теңдікті табу қажеттілігін көрсетеді.'
+            }
+        };
+
+        function openWorkDetails(workTitle) {
+            const work = worksDetails[workTitle];
+            if (work) {
+                openLightbox(
+                    `${workTitle} (${work.year})`,
+                    `${work.genre} - ${work.description}`,
+                    work.fullContent
+                );
+            }
+        }
+
+        // Search functionality
+        function initializeSearch() {
+            const searchHTML = `
+                <div id="searchModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center p-4">
+                    <div class="bg-white rounded-lg max-w-2xl w-full max-h-96 overflow-hidden">
+                        <div class="p-4 border-b">
+                            <div class="flex items-center space-x-2">
+                                <i class="fas fa-search text-gray-400"></i>
+                                <input type="text" id="searchInput" placeholder="Іздеу..." class="flex-1 outline-none text-lg">
+                                <button id="closeSearch" class="text-gray-400 hover:text-gray-600">
+                                    <i class="fas fa-times"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div id="searchResults" class="p-4 max-h-64 overflow-y-auto">
+                            <p class="text-gray-500 text-center">Іздеу сөзін енгізіңіз...</p>
+                        </div>
+                    </div>
+                </div>
+            `;
+            document.body.insertAdjacentHTML('beforeend', searchHTML);
+
+            // Add search button to navigation
+            const nav = document.querySelector('nav .flex');
+            const searchButton = document.createElement('button');
+            searchButton.innerHTML = '<i class="fas fa-search"></i>';
+            searchButton.className = 'text-white hover:text-gray-300 transition-colors';
+            searchButton.onclick = openSearch;
+            nav.appendChild(searchButton);
+        }
+
+        function openSearch() {
+            document.getElementById('searchModal').classList.remove('hidden');
+            document.getElementById('searchInput').focus();
+        }
+
+        function closeSearch() {
+            document.getElementById('searchModal').classList.add('hidden');
+            document.getElementById('searchInput').value = '';
+        }
+
+        // Initialize all interactive features
+        document.addEventListener('DOMContentLoaded', function() {
+            createLightbox();
+            initializeSearch();
+
+            // Add click handlers for gallery items
+            document.querySelectorAll('.card-3d').forEach(card => {
+                const title = card.querySelector('p.font-medium')?.textContent;
+                if (title && galleryItems[title]) {
+                    card.style.cursor = 'pointer';
+                    card.addEventListener('click', () => {
+                        const item = galleryItems[title];
+                        openLightbox(title, item.description, item.fullDescription);
+                    });
+                }
+            });
+
+            // Add click handlers for document buttons
+            document.querySelectorAll('button').forEach(button => {
+                if (button.textContent.includes('Толығырақ оқу')) {
+                    const title = button.closest('.bg-white').querySelector('h4').textContent;
+                    if (title.includes('Тұтқындау')) {
+                        button.onclick = () => openDocumentViewer('arrest');
+                    } else if (title.includes('Ақталу')) {
+                        button.onclick = () => openDocumentViewer('rehabilitation');
+                    }
+                }
+            });
+
+            // Add click handlers for works
+            document.querySelectorAll('.card-3d h3').forEach(title => {
+                const workTitle = title.textContent.replace(/[«»]/g, '');
+                if (worksDetails[workTitle]) {
+                    title.closest('.card-3d').style.cursor = 'pointer';
+                    title.closest('.card-3d').addEventListener('click', () => {
+                        openWorkDetails(workTitle);
+                    });
+                }
+            });
+
+            // Search functionality
+            document.getElementById('closeSearch').addEventListener('click', closeSearch);
+            document.getElementById('searchInput').addEventListener('input', performSearch);
+            
+            // Close search on Escape
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') {
+                    closeSearch();
+                    closeLightbox();
+                }
+            });
+        });
+
+        function performSearch() {
+            const query = document.getElementById('searchInput').value.toLowerCase();
+            const resultsContainer = document.getElementById('searchResults');
+            
+            if (query.length < 2) {
+                resultsContainer.innerHTML = '<p class="text-gray-500 text-center">Іздеу сөзін енгізіңіз...</p>';
+                return;
+            }
+
+            const searchableContent = [
+                { title: 'Міржақып Дулатұлы', section: 'Биография', content: 'ақын жазушы алаш қозғалысы' },
+                { title: 'Оян, Қазақ!', section: 'Негізгі шығарма', content: 'кітап шығарма ұлттық сана' },
+                { title: 'Торғай', section: 'Туған жері', content: 'туу балалық шақ дала' },
+                { title: 'Омбы', section: 'Білім орны', content: 'мұғалім жұмыс газет' },
+                { title: 'Соловки', section: 'Қуғын-сүргін', content: 'тұтқын саяси қуғын' }
+            ];
+
+            const results = searchableContent.filter(item => 
+                item.title.toLowerCase().includes(query) || 
+                item.content.toLowerCase().includes(query)
+            );
+
+            if (results.length === 0) {
+                resultsContainer.innerHTML = '<p class="text-gray-500 text-center">Ештеңе табылмады</p>';
+                return;
+            }
+
+            const resultsHTML = results.map(result => `
+                <div class="p-2 hover:bg-gray-100 rounded cursor-pointer" onclick="scrollToSection('${result.section}')">
+                    <h4 class="font-semibold">${result.title}</h4>
+                    <p class="text-sm text-gray-600">${result.section}</p>
+                </div>
+            `).join('');
+
+            resultsContainer.innerHTML = resultsHTML;
+        }
+
+        function scrollToSection(sectionName) {
+            closeSearch();
+            // Simple scroll to top for now - can be enhanced to scroll to specific sections
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function checkQuiz() {
+            const q1 = document.querySelector('input[name="q1"]:checked');
+            const q2 = document.querySelector('input[name="q2"]:checked');
+            const q3 = document.querySelector('input[name="q3"]:checked');
+            const q4 = document.querySelector('input[name="q4"]:checked');
+            const q5 = document.querySelector('input[name="q5"]:checked');
+            const resultDiv = document.getElementById('quiz-result');
+            
+            let score = 0;
+            let results = [];
+            
+            if (q1) {
+                if (q1.value === 'b') {
+                    score++;
+                    results.push('✅ 1-сұрақ: Дұрыс! «Оян, Қазақ!» 1909 жылы жарық көрді.');
+                } else {
+                    results.push('❌ 1-сұрақ: Қате. Дұрыс жауабы: 1909 жылы.');
+                }
+            } else {
+                results.push('⚠️ 1-сұрақ: Жауап таңдалмаған.');
+            }
+            
+            if (q2) {
+                if (q2.value === 'a') {
+                    score++;
+                    results.push('✅ 2-сұрақ: Дұрыс! Міржақып Дулатұлы Торғай облысында туған.');
+                } else {
+                    results.push('❌ 2-сұрақ: Қате. Дұрыс жауабы: Торғай облысы.');
+                }
+            } else {
+                results.push('⚠️ 2-сұрақ: Жауап таңдалмаған.');
+            }
+            
+            if (q3) {
+                if (q3.value === 'a') {
+                    score++;
+                    results.push('✅ 3-сұрақ: Дұрыс! Алаш қозғалысы қазақ халқының ұлттық автономиясын құруды мақсат етті.');
+                } else {
+                    results.push('❌ 3-сұрақ: Қате. Дұрыс жауабы: Қазақ халқының ұлттық автономиясын құру.');
+                }
+            } else {
+                results.push('⚠️ 3-сұрақ: Жауап таңдалмаған.');
+            }
+            
+            if (q4) {
+                if (q4.value === 'a') {
+                    score++;
+                    results.push('✅ 4-сұрақ: Дұрыс! «Оян, Қазақ!» халықты білім алуға шақырды.');
+                } else {
+                    results.push('❌ 4-сұрақ: Қате. Дұрыс жауабы: Халықты білім алуға шақыру.');
+                }
+            } else {
+                results.push('⚠️ 4-сұрақ: Жауап таңдалмаған.');
+            }
+            
+            if (q5) {
+                if (q5.value === 'b') {
+                    score++;
+                    results.push('✅ 5-сұрақ: Дұрыс! Міржақып Дулатұлы 1935 жылы қайтыс болды.');
+                } else {
+                    results.push('❌ 5-сұрақ: Қате. Дұрыс жауабы: 1935 жылы.');
+                }
+            } else {
+                results.push('⚠️ 5-сұрақ: Жауап таңдалмаған.');
+            }
+            
+            let bgColor = '';
+            let textColor = '';
+            let message = '';
+            
+            if (score === 5) {
+                bgColor = 'bg-green-100';
+                textColor = 'text-green-800';
+                message = 'Өте жақсы! Сіз Міржақып Дулатұлы туралы мәліметтерді жетік білесіз!';
+            } else if (score >= 4) {
+                bgColor = 'bg-blue-100';
+                textColor = 'text-blue-800';
+                message = 'Жақсы нәтиже! Тағы да оқып, білімді тереңдетіңіз.';
+            } else if (score >= 3) {
+                bgColor = 'bg-yellow-100';
+                textColor = 'text-yellow-800';
+                message = 'Орташа нәтиже. Материалды қайта оқып шығыңыз.';
+            } else {
+                bgColor = 'bg-red-100';
+                textColor = 'text-red-800';
+                message = 'Материалды мұқият оқып, қайта тест тапсырыңыз.';
+            }
+            
+            resultDiv.className = `p-4 rounded-lg ${bgColor} ${textColor}`;
+            resultDiv.innerHTML = `
+                <h4 class="font-bold mb-2">Нәтиже: ${score}/5 (${Math.round(score/5*100)}%)</h4>
+                <p class="mb-3 font-medium">${message}</p>
+                <ul class="space-y-1 text-sm">
+                    ${results.map(result => `<li>${result}</li>`).join('')}
+                </ul>
+            `;
+            resultDiv.classList.remove('hidden');
+        }
+    </script>
+
+</body>
+</html>
